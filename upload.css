@@ -1,0 +1,227 @@
+/* Grid for desktop */
+@media screen and (min-width: 601px){
+    .container{
+        display: grid;
+        height: 100vh;
+        grid-template-rows: 100px 50px auto 100px;
+        grid-template-areas:  
+                            'header header header'
+                            'nav nav nav'
+                            'main main main'
+                            'footer footer footer';
+        grid-template-columns: 25% 50% 25%;
+    }
+}
+
+/* Grid for mobile (600px) */
+@media screen and (max-width: 600px) {
+    .container{
+        display: grid;
+        grid-template-rows: 100px 50px auto auto 100px;
+        grid-template-areas:  
+                            'header'
+                            'nav'
+                            'main'
+                            'footer';
+    }
+
+    body{
+        background-color: wheat;
+    }
+}
+
+header{
+    grid-area: header;
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Times New Roman';
+    font-size: xx-large;
+    line-height: 90px;
+    border-bottom: 2px solid black;
+}
+
+nav{
+    grid-area: nav;
+    text-align: center;
+    margin-top: 0.56%;
+}
+
+main{
+    grid-area: main;
+    text-align: center;
+    border-top: 2px solid black;
+    position: relative;
+    overflow-x: hidden;
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+    border-top: 2px solid black;
+}
+
+body{
+    padding: 0px 0px;
+    text-align: center;
+}
+
+a{
+    margin: 4%;
+    text-decoration: none;
+    color: black;
+}
+
+.read{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 5%;
+    background-color: rgba(220, 20, 60, 0.863);
+    width: 140px;
+    padding: 3px;
+}
+
+.toon{
+    color: crimson;
+}
+
+#nightBtn{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 5%;
+    width: 100px;
+    padding: 3px;
+}
+
+.night{
+    background-color: black;
+    color: white;
+}
+.day{
+    background-color: white;
+    color: black;
+}
+
+.night #nightBtn{
+    background-color: white;
+    color: black;
+}
+
+/* Night Mode */
+body.night {
+    background-color: black;
+    color: white;
+}
+
+body.night header,
+body.night main,
+body.night footer {
+    border-color: white;
+}
+
+body.night a {
+    color: white;
+}
+
+body.night hr {
+    border-color: white;
+}
+
+body.night #nightBtn {
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+
+body.night .read {
+    border-color: white;
+}
+
+/* Form */
+.form{
+    width: 30%;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formGroup{
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+label{
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"]{
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 15px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.radio{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.checkbox{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Form night view */
+body.night input[type="text"],
+body.night input[type="email"],
+body.night input[type="file"]{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+body.night label{
+    color: white;
+}
+
+body.night .radio label, 
+body.night .checkbox label{
+    color: white;
+}
+
+/* Uploaded book */
+.uploadedBook{
+    display: inline-block;       
+    margin: 10px;
+    text-align: center;
+}
+
+.uploadedBook img{
+    border: 2px solid black;
+    border-radius: 5%;
+    width: 230px;
+    height: 380px;
+    object-fit: cover;           
+}
+
+.uploadedBook .title{
+    font-size: x-large;
+    margin-top: 6px;
+}
+
+/* Uploaded book night view */
+body.night .uploadedBook img{
+    border: 2px solid white;
+}

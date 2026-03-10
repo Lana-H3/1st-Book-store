@@ -1,0 +1,250 @@
+/* Grid for desktop (the format = image column_row)*/
+@media screen and (min-width: 601px){
+    .container{
+        display: grid;
+        height: 100vh;
+        grid-template-rows: 100px 50px 50px auto 50px auto 50px auto 100px;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-areas: 
+                            'header header header header'
+                            'nav nav nav nav' 
+                            'genre_1 genre_1 genre_1 genre_1'
+                            'image1_1 image2_1 image3_1 image4_1'
+                            'genre_2 genre_2 genre_2 genre_2'
+                            'image1_2 image2_2 image3_2 image4_2'
+                            'genre_3 genre_3 genre_3 genre_3'
+                            'image1_3 image2_3 image3_3 image4_3'
+                            'footer footer footer footer';
+    }
+}
+
+/* Grid for mobile (600px) */
+@media screen and (max-width: 600px) {
+    .container{
+        display: grid;
+        grid-template-rows: 100px 50px 50px auto auto 50px auto auto 50px auto auto 100px;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:  
+                            'header header'
+                            'nav nav'
+                            'genre_1 genre_1'
+                            'image1_1 image2_1'
+                            'image3_1 image4_1'
+                            'genre_2 genre_2'
+                            'image1_2 image2_2'
+                            'image3_2 image4_2'
+                            'genre_3 genre_3'
+                            'image1_3 image2_3'
+                            'image3_3 image4_3'
+                            'footer footer';
+    }
+}
+
+header{
+    grid-area: header;
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Times New Roman';
+    font-size: xx-large;
+    line-height: 90px;
+    border-bottom: 2px solid black;
+}
+
+nav{
+    grid-area: nav;
+    text-align: center;
+    margin-top: 0.56%;
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+    border-top: 2px solid black;
+}
+
+a{
+    margin: 4%;
+    text-decoration: none;
+    color: black;
+}
+
+.read{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 5%;
+    background-color: rgba(220, 20, 60, 0.863);
+    width: 140px;
+    padding: 3px;
+}
+
+img{
+    border: 2px solid black;
+    border-radius: 5%;
+    width: 230px;
+    height: 380px;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+img:hover{
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+.toon{
+    color: crimson;
+}
+
+.title{
+    font-size: x-large;
+}
+
+/* Genre titles */
+#genre_1{
+    grid-area: genre_1;
+}
+#genre_2{
+    grid-area: genre_2;
+}
+#genre_3{
+    grid-area: genre_3;
+}
+.genre{
+    border-top: 2px solid black;
+    text-align: start;
+    font-size: xx-large;
+    font-family:'Times New Roman';
+    font-weight: bold;
+}
+
+/* Row 1 */
+#image1_1{
+    grid-area: image1_1;
+    text-align: center;
+}
+#image2_1{
+    grid-area: image2_1;
+    text-align: center;
+}
+#image3_1{
+    grid-area: image3_1;
+    text-align: center;
+}
+#image4_1{
+    grid-area: image4_1;
+    text-align: center;
+}
+
+/* Row 2 */
+#image1_2{
+    grid-area: image1_2;
+    text-align: center;
+}
+#image2_2{
+    grid-area: image2_2;
+    text-align: center;
+}
+#image3_2{
+    grid-area: image3_2;
+    text-align: center;
+}
+#image4_2{
+    grid-area: image4_2;
+    text-align: center;
+}
+
+/* Row 3 */
+#image1_3{
+    grid-area: image1_3;
+    text-align: center;
+}
+#image2_3{
+    grid-area: image2_3;
+    text-align: center;
+}
+#image3_3{
+    grid-area: image3_3;
+    text-align: center;
+}
+#image4_3{
+    grid-area: image4_3;
+    text-align: center;
+}
+
+/* Row 4 */
+#image1_4{
+    grid-area: image1_4;
+    text-align: center;
+}
+#image2_4{
+    grid-area: image2_4;
+    text-align: center;
+}
+#image3_4{
+    grid-area: image3_4;
+    text-align: center;
+}
+#image4_4{
+    grid-area: image4_4;
+    text-align: center;
+}
+
+/* Night theme */
+#nightBtn{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 5%;
+    width: 100px;
+    padding: 3px;
+}
+
+.night{
+    background-color: black;
+    color: white;
+}
+.day{
+    background-color: white;
+    color: black;
+}
+
+.night #nightBtn{
+    background-color: white;
+    color: black;
+}
+
+body.night {
+    background-color: black;
+    color: white;
+}
+
+body.night header,
+body.night main,
+body.night footer {
+    border-color: white;
+}
+
+body.night a {
+    color: white;
+}
+
+body.night hr {
+    border-color: white;
+}
+
+body.night #nightBtn {
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+
+body.night .read {
+    border-color: white;
+}
+
+body.night .genre {
+    border-top: 2px solid white;
+}
+
+body.night img{
+    border: 2px solid white;
+}
